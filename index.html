@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <script>
+      (function() {
+        try {
+          var _f = window.fetch;
+          var defineWritableFetch = function(target) {
+            try {
+              Object.defineProperty(target, 'fetch', {
+                get: function() { return _f; },
+                set: function(v) { _f = v; },
+                configurable: true,
+                enumerable: true
+              });
+            } catch(e) {}
+          };
+          defineWritableFetch(window);
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            defineWritableFetch(Window.prototype);
+          }
+          if (typeof globalThis !== 'undefined' && globalThis !== window) {
+            defineWritableFetch(globalThis);
+          }
+        } catch(err) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔥 MEGA PACK DE MÚSICAS 2026 - Mais de 150.000 Músicas em 320kbps</title>
+    <meta name="description" content="O Maior e Mais Atualizado Acervo de Músicas do Brasil. Organizado por pastas, gêneros e BPMs. Qualidade 320kbps HD. Acesso completo e atualizações semanais." />
+    <meta property="og:title" content="🔥 MEGA PACK DE MÚSICAS 2026 - Acesso Completo com 85% OFF" />
+    <meta property="og:description" content="Tenha em mãos mais de 150.000 músicas selecionadas, sem propagandas, sem vírus e com áudio cristalino. Liberado para tocar em festas, bares, academias e som automotivo." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Cabinet+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#080808] text-gray-100 antialiased selection:bg-cyan-500 selection:text-black font-['Plus_Jakarta_Sans',sans-serif]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
